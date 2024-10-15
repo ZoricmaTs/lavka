@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    background-color: rgba(237, 246, 255, 1);
+}
+.shelves {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 35vh;
+    height: 72vh;
+    top: 5vh;
+    left: 50%;
+    margin-left: -17.5vh;
+    padding-top: 4vh;
+    background-image: url("./images/shelves.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+.shelves__shelf {
+    display: flex;
+    flex-direction: row;
+    height: 16vh;
+    list-style: none;
+    align-items: flex-end;
+}
+
+.shelves__place {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cart {
+    position: absolute;
+    width: 46vh;
+    height: 38vh;
+    top: 61vh;
+    left: 50%;
+    margin-left: -22.5vh;
+    z-index: 100;
+}
+.cart__place {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 34vh;
+    height: 21vh;
+    left: 19%;
+    bottom: 22%;
+}
+.cart__image {
+    position: absolute;
+    background-image: url("./images/cart.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.buying{
+    position: absolute;
+    bottom: 2%;
+    width: 35vh;
+    left: 50%;
+    margin-left: -17.5vh;
+    z-index: 200;
+    font-family: YS Text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -0.005em;
+    text-align: center;
+    background-color: rgba(252, 224, 0, 1);
+    color: rgba(33, 32, 31, 1);
+    border-radius: 16px;
+    padding: 18px;
+    border: 0;
+    text-decoration: none;
+}
+
+.blink {
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    /*animation-timing-function: cubic-bezier(1.0,0,0,1.0);*/
+    animation-duration: 2s;
+}
+
+.transition {
+    transition: top .5s, left .5s;
+}
+
+@keyframes blinker {
+    0% {opacity: 0.0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
